@@ -66,8 +66,38 @@ Dev_KKDollar_iOS
 
 ---
 
+##Main Branch Hierarchy
+main
+└── SIT_KKDollar_iOS
+    └── Dev_KKDollar_iOS
+
+
+main → Production
+
+SIT_KKDollar_iOS → QA / SIT testing
+
+Dev_KKDollar_iOS → Development base branch
+
+##Working Branches
+
+All working branches must be created from Dev_KKDollar_iOS.
+
+Dev_KKDollar_iOS
+├── Dev_KKDollar_iOS_Bhadresh_Feb10      (minor bug fix)
+├── KKRPROD-6187_Currency_Support        (Jira task)
+├── KKRPROD-6201_Login_UI                (Jira task)
+
+##Merge Direction (Strict)
+Task / Bug Branch
+        ↓
+Dev_KKDollar_iOS
+        ↓
+SIT_KKDollar_iOS
+        ↓
+main
+
 ## Rules Summary
-- Always branch from Dev_KKDollar_iOS
-- Follow naming conventions strictly
-- No direct commits to main, SIT_KKDollar_iOS, or Dev_KKDollar_iOS
-- No PRs for unfinished or parallel tasks
+- ✅Always branch from Dev_KKDollar_iOS
+- ✅Follow naming conventions strictly
+- ❌No direct commits to main, SIT_KKDollar_iOS, or Dev_KKDollar_iOS
+- ❌No PRs for unfinished or parallel tasks

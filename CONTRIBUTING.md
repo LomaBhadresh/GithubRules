@@ -229,6 +229,7 @@ Remember:
         Easy rollback capability
         Audit trail per release
         CI/CD automation reference
+        
     🔒 Strict Rules Summary
         Release branch must be created from Dev_KKDollar_iOS
         Release branch name = Jira ticket (e.g., PP-605)
@@ -237,6 +238,7 @@ Remember:
         No direct merge from task → SIT or main
         No direct release from Dev → main
         Every production release must have a Git tag
+        
     ✅ Benefits of This Strategy
         Supports multiple parallel Jira tasks
         Allows selective feature release
@@ -245,16 +247,17 @@ Remember:
         Reduces future merge conflicts
         Provides clear audit trail per release
         Ensures controlled and traceable production deployments
+        
 # 📌 Final Release Checklist
      Before marking release complete:
-    Release branch created from Dev
-    Only approved tasks merged
-    Release synced back to Dev
-    Merged into SIT
-    QA approval completed
-    Merged into main
-    Git tag created (e.g., v7.1)
-    CI/CD pipeline successful
+        Release branch created from Dev
+        Only approved tasks merged
+        Release synced back to Dev
+        Merged into SIT
+        QA approval completed
+        Merged into main
+        Git tag created (e.g., v7.1)
+        CI/CD pipeline successful
 ---------------------
 Document Owner: iOS Team
 Project: KKR iOS

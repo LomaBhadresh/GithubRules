@@ -123,7 +123,7 @@ flowchart TB
 - ❌ No direct commits to main, SIT_KKDollar_iOS, or Dev_KKDollar_iOS
 - ❌ No PRs for unfinished or parallel tasks
 
-#🚀 KKR iOS – Selective Feature Release Strategy
+# 🚀 KKR iOS – Selective Feature Release Strategy
     🎯 Purpose
     In KKR iOS, multiple Jira tasks are developed in parallel from Dev_KKDollar_iOS. However, not all completed tasks are released at the same time.
     To ensure safe, controlled, and selective releases, we follow the structured release process described below.
@@ -131,21 +131,21 @@ flowchart TB
     Dev_KKDollar_iOS
 
 
-##🧩 Parallel Development Example
+## 🧩 Parallel Development Example
     Ongoing Tasks
     ✅ KKRPROD-6187_Currency_Support (Ready for release)
     ✅ KKRPROD-6190_PlayGame (Ready for release)
     🔄 KKRPROD-6189_Language_Support (Still in development – NOT ready)
     All three tasks are being developed in parallel from Dev_KKDollar_iOS.
 
-##🎬 Release Scenario
+## 🎬 Release Scenario
     We want to release only:
     ✅ KKRPROD-6187_Currency_Support
     ✅ KKRPROD-6190_PlayGame
     We DO NOT want to release:
     ❌ KKRPROD-6189_Language_Support
 
-##📌 Step 1 — Create Release Branch
+## 📌 Step 1 — Create Release Branch
     Release Jira Ticket: PP-605
     Create release branch from: Dev_KKDollar_iOS
     Branch name must match Jira ticket:
@@ -153,7 +153,7 @@ flowchart TB
 
 ⚠ Release branch must always be created from Dev_KKDollar_iOS
 
-##📌 Step 2 — Merge Only Approved Tasks
+## 📌 Step 2 — Merge Only Approved Tasks
     Merge only selected task branches into PP-605
     Example:
     KKRPROD-6187_Currency_Support  →  PP-605
@@ -181,7 +181,7 @@ Selected Task Branches
    SIT_KKDollar_iOS
           ↓
         main
-##📌 Step 3 — Sync Release Back to Dev (MANDATORY)
+## 📌 Step 3 — Sync Release Back to Dev (MANDATORY)
     After testing is completed and release branch is finalized:
     PP-605 → Dev_KKDollar_iOS
     🔍 Why This Is Critical
@@ -200,19 +200,19 @@ Remember:
     Stable code alignment
     Clean history management
 
-##📌 Step 4 — Merge to SIT
+## 📌 Step 4 — Merge to SIT
     After syncing back to Dev:
     Dev_KKDollar_iOS → SIT_KKDollar_iOS
 
     QA performs final verification
     Only release-approved code exists in SIT
 
-##📌 Step 5 — Production Release
+## 📌 Step 5 — Production Release
     After QA approval:
     SIT_KKDollar_iOS → main
     ⚠ No direct merge from Dev to main.
 
-##🏷 Step 6 — Create Release Tag (MANDATORY)
+## 🏷 Step 6 — Create Release Tag (MANDATORY)
     After merging into main, create a Git tag for the release.
     Example:
         If release version is: 7.1
@@ -245,7 +245,7 @@ Remember:
         Reduces future merge conflicts
         Provides clear audit trail per release
         Ensures controlled and traceable production deployments
-#📌 Final Release Checklist
+# 📌 Final Release Checklist
      Before marking release complete:
     Release branch created from Dev
     Only approved tasks merged
